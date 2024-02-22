@@ -1,0 +1,2305 @@
+/* #region PADRÃO*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: table;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    color: #585757;
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 1300px;
+    display: table;
+    text-align: justify;
+    line-height: 30px;
+    margin: 0 auto;
+    padding: 4% 0;
+}
+
+@media screen and (max-width: 1400px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+.bloco_l {
+    width: 48%;
+    float: left;
+}
+
+.bloco_r {
+    width: 48%;
+    float: right;
+}
+
+@media screen and (max-width: 950px) {
+    .bloco_l {
+        width: 100%;
+    }
+    .bloco_r {
+        width: 100%;
+    }
+}
+
+.titulo {
+    font-size: 35px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.titulo1 {
+    font-size: 35px;
+    line-height: 40px;
+    text-align: left;
+    font-weight: 900;
+}
+
+.subtitulo {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.destaque {
+    font-size: 20px;
+}
+
+.imprimir {
+    background: #02b6ce;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+}
+
+::-webkit-input-placeholder {
+    color: #595a5c;
+    font-family: "Lato Condensed", sans-serif;
+    font-size: 15px;
+}
+
+:-moz-placeholder {
+    color: #595a5c;
+    font-family: "Lato Condensed", sans-serif;
+    font-size: 15px;
+}
+
+::-moz-placeholder {
+    color: #595a5c;
+    font-family: "Lato Condensed", sans-serif;
+    font-size: 15px;
+}
+
+:-ms-input-placeholder {
+    color: #595a5c;
+    font-family: "Lato Condensed", sans-serif;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    color: #585757;
+    font-family: "Lato Condensed", sans-serif;
+    font-size: 15px;
+}
+
+.paginacao {
+    width: 100%;
+    display: table;
+    margin-bottom: 30px;
+}
+
+.paginacao a {
+    color: #4f0607;
+}
+
+.azul {
+    color: #2f91ce;
+}
+
+.azul2 {
+    color: #353068;
+}
+
+.cinza {
+    color: #585757;
+}
+
+.vermelho {
+    color: #e63323;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+}
+
+table tr td {
+    padding: 2%;
+    text-align: center;
+    max-width: 200px;
+}
+
+table tr td.left {
+    text-align: left;
+}
+
+table tr td i {
+    font-size: 25px;
+    color: #353068;
+}
+
+table tr td #acesso {
+    font-size: 30px;
+    color: #353068;
+}
+
+.linhaimpar {
+    background: #f2f2f2;
+}
+
+.linhapar {
+    background: #ffff;
+}
+
+.linhabusca {
+    background: #f2f2f2;
+    padding: 1px 12px;
+    margin: 0 0 5px 0;
+}
+
+.data {
+    font-size: 13px;
+    font-style: italic;
+    color: #595a5c;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.voltar {
+    padding: 10px 15px;
+    float: right;
+    background-color: #e63323;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    display: table;
+}
+
+
+/* #endregion */
+
+
+/*#region CADASTRE SUA SENHA*/
+
+#cadastro_senha {
+    margin-top: 100px;
+    width: 500px;
+    padding: 5%;
+    border: 1px solid #333;
+    border-radius: 15px;
+    display: table;
+    background: #fff;
+}
+
+#cadastro_senha input[type='password'],
+input[type='text'] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+#cadastro_senha label {
+    width: 100%;
+    text-align: left;
+    display: table;
+}
+
+#cadastro_senha #bt_enviar {
+    margin: 10px auto;
+    float: none;
+    display: table;
+    padding: 10px 20px;
+    color: #fff;
+    background: #2f91ce;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+@media screen and (max-width:640px) {
+    #cadastro_senha {
+        width: 80%;
+    }
+}
+
+
+/*#endregion*/
+
+
+/*#region PÁGINAÇÃO*/
+
+.paginacao {
+    float: right;
+    color: #2f91ce;
+    display: table;
+    border: 1px solid #2f91ce;
+    width: auto;
+}
+
+.paginacao .pg {
+    float: left;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    color: #fff;
+    background-color: #2f91ce;
+    border: 1px solid #2f91ce;
+}
+
+.paginacao #bloco1 {
+    background-color: #fff;
+    color: #2f91ce;
+}
+
+
+/*#endregion*/
+
+
+/* #region TOPO*/
+
+.topo {
+    width: 100%;
+    display: table;
+}
+
+.topo .faixa {
+    width: 100%;
+    padding: 10px 0;
+    background: #f4f4f4;
+    display: table;
+    color: #585757;
+    position: fixed;
+    z-index: 99999999999;
+}
+
+.topo .faixa #faixa {
+    width: 96%;
+    float: none;
+    display: table;
+    margin: 0 auto;
+}
+
+.topo .faixa .tp_cad {
+    width: 220px;
+    float: right;
+    position: relative;
+    margin-top: -15px;
+    display: table;
+}
+
+.topo .faixa .tp_cad a {
+    color: #fff;
+}
+
+.topo .faixa .tp_cad .log {
+    width: 40%;
+    left: 0;
+    padding: 20px 10px;
+    background: #2f91ce;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.topo .faixa .tp_cad .cad {
+    right: 0;
+    padding: 20px 10px;
+    background: #353068;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.topo .faixa #faixa .acess {
+    width: 920px;
+    float: left;
+    display: table;
+    text-align: left;
+    font-size: 12px;
+}
+
+.topo .faixa #faixa .acess .unico {
+    color: #585757;
+}
+
+.topo .faixa #faixa .acess i {
+    color: #585757;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.topo .faixa #faixa .acess .bloco1 {
+    display: table;
+    float: left;
+    padding-right: 10px;
+    border-right: 1px solid #4a92c3;
+}
+
+.topo .faixa #faixa .acess .bloco2 {
+    display: table;
+    float: left;
+    margin-left: 10px;
+}
+
+.topo .faixa #faixa .acess a {
+    margin-right: 10px;
+}
+
+.topo #topo {
+    width: 1300px;
+    margin: 0 auto;
+    display: table;
+    margin: 60px auto 30px auto;
+}
+
+.topo .busca {
+    width: 80%;
+    float: left;
+    margin-left: 2%;
+}
+
+.topo .busca input[type="text"] {
+    width: 97%;
+    float: left;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    outline: none;
+}
+
+.topo .busca button {
+    width: 80px;
+    float: right;
+    padding: 10px 0;
+    background: none;
+    position: relative;
+    z-index: 99999999;
+    margin-top: -53px;
+    border: none;
+}
+
+.topo .logo {
+    width: 15%;
+    float: left;
+}
+
+.topo .logo img {
+    width: 100%;
+    max-width: 220px;
+    float: left;
+}
+
+.topo .logo_c {
+    display: table;
+}
+
+.topo .logo_w,
+.topo .logo_p,
+.topo .logo_b {
+    display: none;
+}
+
+.topo .menu {
+    width: 84%;
+    display: table;
+    margin: 0 auto;
+    float: left;
+    margin-top: 30px;
+    margin-left: 1%;
+}
+
+@media screen and (max-width: 1300px) {
+    .topo .faixa #faixa {
+        width: 98%;
+    }
+    .topo .menu {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: -120px;
+    }
+    .topo .logo {
+        width: 300px;
+        margin: 0 auto;
+        float: none;
+    }
+    .topo .logo img {
+        margin: 0 auto;
+    }
+    .topo #topo {
+        width: 100%;
+    }
+    .topo .busca {
+        width: 95%;
+        margin: 0 auto;
+        float: none;
+        margin-top: 60px;
+        display: table;
+    }
+}
+
+@media screen and (max-width: 1164px) {
+    .topo .faixa #faixa .acess .bloco1 {
+        border: none;
+    }
+    .topo .faixa #faixa .acess .bloco2 {
+        float: left;
+        margin-top: 5px;
+    }
+    .topo .faixa #faixa .acess {
+        width: 500px;
+    }
+    .topo .faixa {
+        position: relative;
+    }
+    .topo #topo {
+        margin: 60px auto 30px auto;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .topo .faixa .tp_cad {
+        display: none;
+    }
+    .topo .faixa #faixa .acess {
+        width: 98%;
+    }
+    .topo .faixa #faixa .acess .bloco1 {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+    .topo .faixa #faixa .acess .bloco2 {
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:510px) {
+    .topo .faixa #faixa .acess .unico {
+        width: 100%;
+        display: table;
+        text-align: left;
+        margin: 0 auto;
+        margin: 5px 0;
+    }
+}
+
+.banner-top {
+    width: 100%;
+    padding: 80px 0;
+    background: url("../imagens/banner/banner-top.jpg") center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+.btn-wp {
+    right: 0px;
+    top: 100px;
+    position: fixed;
+    z-index: 99999999999999;
+    width: 100px;
+    margin-right: -60px;
+    transition: 0.3s;
+}
+
+.enabled {
+    z-index: 99999999999999;
+}
+
+.btn-wp #sociais {
+    float: right;
+    width: 56%;
+    font-size: 30px;
+    text-align: right;
+    background: #4ba3c3;
+    padding: 10% 2%;
+    text-align: center;
+}
+
+.btn-wp #sociais i {
+    margin-bottom: 10px;
+}
+
+.btn-wp #setas {
+    float: left;
+    width: 36%;
+    font-size: 30px;
+    color: #fff;
+    background: #4ba3c3;
+    text-align: center;
+    padding: 2%;
+}
+
+.btn-wp #setas i {
+    cursor: pointer;
+}
+
+.btn-wp #setas #fecha {
+    display: none;
+}
+
+.btn-wp a {
+    color: #fff;
+}
+
+@media screen and (max-width:510px) {
+    .topo .faixa #faixa .acess .unico {
+        width: 100%;
+        display: table;
+        text-align: left;
+        margin: 0 auto;
+        margin: 5px 0;
+    }
+    .btn-wp {
+        top: 130px;
+    }
+}
+
+
+/* #endregion */
+
+
+/* #region RODAPE*/
+
+.rodape {
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    background: #fff;
+    color: #fff;
+}
+
+.rodape #rodape {
+    width: 1300px;
+    margin: 0 auto;
+    display: table;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 1400px) {
+    .rodape #rodape {
+        width: 90%;
+    }
+}
+
+.rodape #rodape .bloco {
+    float: left;
+    width: 24%;
+    margin: 1%;
+    margin-left: 0;
+    display: table;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 1100px) {
+    .rodape #rodape .bloco {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .rodape #rodape .bloco {
+        width: 98%;
+    }
+}
+
+.rodape #rodape ul li {
+    line-height: 40px;
+    list-style: none;
+    transition: 0.3s;
+}
+
+.rodape #rodape ul li a {
+    color: #585757;
+    transition: 0.3s;
+}
+
+.rodape #rodape ul li a:hover {
+    color: #02b6ce;
+}
+
+.rodape #rodape .bloco .men {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.rodape #rodape .bloco .sub {
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.rodape #rodape .bloco .sub:hover {
+    margin-left: 30px;
+}
+
+.rodape .subtitulo {
+    text-align: center;
+}
+
+.rodape #copy {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #585757!important;
+}
+
+@media screen and (max-width: 360px) {
+    .rodape #rodape .bloco2 {
+        font-size: 14px;
+    }
+}
+
+#rodape_empresas {
+    background: #f5f5f5;
+}
+
+#rodape_empresas .wrapper {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#rodape_empresas .bloco {
+    width: 29%;
+    float: left;
+    margin: 2%;
+}
+
+#rodape_empresas .bloco img {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    display: table;
+}
+
+@media screen and (max-width: 700px) {
+    #rodape_empresas .bloco {
+        width: 98%;
+        margin: 2%;
+    }
+}
+
+
+/* #endregion*/
+
+
+/* #region HOME DESTAQUES*/
+
+.destaques {
+    background: #f3f3f3;
+}
+
+#destaques {
+    width: 70%;
+    display: table;
+    margin: 0 auto;
+    margin-top: -100px;
+    z-index: 9999;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+@media screen and (max-width: 1400px) {
+    #destaques {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #destaques {
+        margin: 0 auto;
+    }
+}
+
+#destaques .home_servicos {
+    width: 100%;
+    display: table;
+}
+
+#destaques .destaque1 .list {
+    width: 96%;
+    text-align: center;
+    padding: 2%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#destaques .destaque1 #verde {
+    background: #bbd151;
+}
+
+#destaques .destaque1 #branco {
+    background: #fff;
+}
+
+#destaques .destaque2 {
+    padding: 2%;
+    background: #2f91ce;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 44%;
+    text-align: center;
+    color: #fff;
+    display: table;
+    height: 240px;
+}
+
+@media screen and (max-width: 1400px) {
+    #destaques {
+        width: 100%;
+    }
+    #destaques .destaque2 {
+        height: 260px;
+    }
+}
+
+@media screen and (max-width:950px) {
+    #destaques .destaque2 {
+        width: 94%;
+        float: none;
+        margin: 2% auto;
+        padding: 8% 2%;
+        z-index: 999;
+    }
+}
+
+#destaques .destaque2 h1 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.bnn2 {
+    width: 99%;
+    display: table;
+    height: 280px;
+    text-align: center;
+    border-radius: 15px;
+    background: #2f91ce;
+}
+
+.bnn2 a {
+    padding: 100px 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* #endregion*/
+
+
+/* #region HOME SERVIÇOS*/
+
+#home_servicos {
+    width: 100%;
+    margin-top: -10%;
+}
+
+#home_servicos .slides3 {
+    width: 1300px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    float: none;
+}
+
+@media screen and (max-width: 1400px) {
+    #home_servicos .slides3 {
+        width: 1100px;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    #home_servicos .slides3 {
+        width: 900px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #home_servicos .slides3 {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #home_servicos .slides3 {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #home_servicos .slides3 {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #home_servicos .slides3 {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #home_servicos .slides3 {
+        width: 250px;
+    }
+}
+
+#home_servicos h2 {
+    text-align: center;
+}
+
+#home_servicos .slides3 .color1 {
+    background: #02b6ce;
+}
+
+#home_servicos .slides3 .color2 {
+    background: #2f91ce;
+}
+
+#home_servicos .slides3 .color3 {
+    background: #ff8b01;
+}
+
+#home_servicos .slides3 .color4 {
+    background: #eb5c2e;
+}
+
+#home_servicos .slides3 .color5 {
+    background: #bacc3a;
+}
+
+#home_servicos .slides3 .color6 {
+    background: #008f4e;
+}
+
+#home_servicos .slides3 .color7 {
+    background: #9047b2;
+}
+
+#home_servicos .slides3 .color8 {
+    background: #53c32f;
+}
+
+#home_servicos .slides3 .color9 {
+    background: #175676;
+}
+
+#home_servicos .slides3 .color10 {
+    background: #4ba3c3;
+}
+
+#home_servicos .slides3 .color11 {
+    background: #77d281;
+}
+
+#home_servicos .slides3 .color12 {
+    background: #e63323;
+}
+
+#home_servicos .slides3 .color13 {
+    background: #ff9b85;
+}
+
+#home_servicos .slides3 .color14 {
+    background: #e63323;
+}
+
+#home_servicos .slides3 .color15 {
+    background: #3f8efc;
+}
+
+#home_servicos .slides3 .color16 {
+    background: #631a86;
+}
+
+#home_servicos .slides3 .color17 {
+    background: #d58936;
+}
+
+#home_servicos .slides3 .color18 {
+    background: #69140e;
+}
+
+#home_servicos .slides3 .color19 {
+    background: #ec9f05;
+}
+
+#home_servicos .slides3 .color20 {
+    background: #3b28cc;
+}
+
+#home_servicos .slides3 .item {
+    border-radius: 15px;
+    padding: 30px 5%;
+    color: #fff;
+    display: block;
+}
+
+#home_servicos .slides3 .item i {
+    font-size: 55px;
+}
+
+#home_servicos .slides3 .item .desc {
+    height: 60px;
+    margin-top: 5px;
+}
+
+.slick-cloned,
+.slick-slide {
+    margin: 0 10px;
+}
+
+.slick-list {
+    width: 99%;
+    left: 1%;
+    right: 1%;
+}
+
+
+/* #endregion*/
+
+
+/* #region HOME NOTICIAS*/
+
+#noticias .bloco {
+    width: 20%;
+    float: left;
+    display: table;
+    color: #585757;
+    transition: 0.3s;
+    padding: 2% 1%;
+    margin: 1%;
+    border-radius: 15px;
+    background: #f3f3f3;
+}
+
+#noticias .bloco:hover {
+    background: #02b6ce;
+    color: #fff;
+}
+
+#noticias .bloco:hover span {
+    color: #fff;
+}
+
+#noticias .bloco .desc {
+    width: 100%;
+    height: 100px;
+}
+
+@media screen and (max-width: 1220px) {
+    #noticias .bloco {
+        width: 46%;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #noticias .bloco {
+        width: 96%;
+        text-align: center;
+        border-radius: 15px 15px 0 0;
+        border-bottom: 2px solid #ccc;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* #endregion*/
+
+
+/* #region HOME SALA DE SITUAÇÃO*/
+
+#sala_situacao {
+    width: 100%;
+    background: #f3f3f3;
+}
+
+#sala_situacao .sala_destaque {
+    width: 33%;
+    float: left;
+    padding: 2% 2% 0 2%;
+    background: #02b6ce;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    height: 287px;
+    margin-bottom: 1%;
+    margin-right: 1%;
+}
+
+#sala_situacao .sala_destaque i {
+    font-size: 70px;
+    margin-right: 15px;
+}
+
+#sala_situacao .sala_bloco {
+    width: 16%;
+    float: left;
+    padding: 1% 1% 0 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    height: 300px;
+}
+
+#sala_situacao .bl1 {
+    background: #ff8b01;
+}
+
+#sala_situacao .bl2 {
+    background: #008f4e;
+}
+
+#sala_situacao .bl3 {
+    background: #ff9b85;
+}
+
+#sala_situacao .bl4 {
+    background: #4ba3c3;
+}
+
+#sala_situacao .bl5 {
+    background: #53c32f;
+}
+
+#sala_situacao .bl6 {
+    background: #175676;
+}
+
+#sala_situacao .bl7 {
+    background: #eb5c2e;
+}
+
+#sala_situacao .bl8 {
+    background: #77d281;
+}
+
+#sala_situacao .bl9 {
+    background: #e63323;
+}
+
+#sala_situacao .bl10 {
+    background: #bacc3a;
+}
+
+#sala_situacao .bl11 {
+    background: #3f8efc;
+}
+
+#sala_situacao .data {
+    color: #fff;
+}
+
+#sala_situacao .data i {
+    font-size: 15px;
+}
+
+#sala_situacao .icone {
+    width: 100%;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:1360px) {
+    #sala_situacao .sala_destaque {
+        height: 350px;
+    }
+    #sala_situacao .sala_bloco {
+        height: 363px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #sala_situacao .sala_bloco,
+    #sala_situacao .sala_destaque {
+        width: 28%;
+        float: left;
+        padding: 2% 2% 0 2%;
+        height: 350px;
+        margin-bottom: 1%;
+        margin-right: 1%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    #sala_situacao .sala_bloco,
+    #sala_situacao .sala_destaque {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #sala_situacao .sala_bloco,
+    #sala_situacao .sala_destaque {
+        width: 96%;
+        margin: 1% 0;
+        padding-bottom: 30px;
+        height: auto;
+    }
+}
+
+
+/* #endregion*/
+
+
+/*#region HOME LICITAÇÕES*/
+
+#licitacoes {
+    background: #2f91ce;
+    color: #2f91ce;
+}
+
+#licitacoes .branco {
+    color: #fff;
+}
+
+#licitacoes .item {
+    width: 98%;
+    padding: 1%;
+    border: 1px solid #2f91ce;
+    border-radius: 15px;
+    margin: 15px 0;
+    display: table;
+    background: #fff;
+}
+
+#licitacoes .item .titulo {
+    text-align: left;
+}
+
+#licitacoes .item .data {
+    width: 13%;
+    float: left;
+    border-right: 1px solid #2f91ce;
+    margin-right: 2%;
+    padding-top: 2%;
+    font-weight: 700;
+    text-align: center;
+    color: #2f91ce;
+    font-style: normal;
+}
+
+#licitacoes .item .data i {
+    font-size: 40px;
+}
+
+#licitacoes .item .codigo {
+    width: 70%;
+    float: left;
+}
+
+#licitacoes .item .acessar {
+    width: 10%;
+    float: right;
+}
+
+#licitacoes .item .acessar button {
+    padding: 15px 20px;
+    text-align: center;
+    color: #fff;
+    background: #2f91ce;
+    border: none;
+    border-radius: 15px;
+    margin-top: 70px;
+    font-size: 18px;
+}
+
+#licitacoes button {
+    padding: 15px 25px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+#licitacoes a {
+    color: #fff;
+}
+
+#licitacoes button:hover {
+    background: #fff;
+    color: #2f91ce;
+}
+
+@media screen and (max-width: 1000px) {
+    #licitacoes .item {
+        width: 40%;
+        float: left;
+        margin: 2%;
+        padding: 2%;
+    }
+    #licitacoes .item .data {
+        display: none;
+    }
+    #licitacoes .item .codigo {
+        width: 100%;
+        float: left;
+        height: 250px;
+    }
+    #licitacoes .item .acessar {
+        width: 100%;
+        float: none;
+    }
+    #licitacoes .item .acessar button {
+        float: none;
+        display: table;
+        margin: 30px auto;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #licitacoes .item {
+        width: 96%;
+        margin: 2% 0;
+    }
+    #licitacoes .item .codigo {
+        height: auto;
+    }
+}
+
+
+/* #endregion*/
+
+
+/* #region HOME CONTATO*/
+
+#contato .bloco {
+    width: 19%;
+    float: left;
+    padding: 2%;
+    margin: 1%;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    display: table;
+    height: 150px;
+}
+
+#contato .bloco a {
+    color: #fff;
+}
+
+#contato .bloco i {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#contato #bl1 {
+    background: #175676;
+}
+
+#contato #bl2 {
+    background: #008f4e;
+}
+
+#contato #bl3 {
+    background: #eb5c2e;
+}
+
+#contato #bl4 {
+    background: #2f91ce;
+}
+
+@media screen and (max-width: 950px) {
+    #contato .bloco {
+        width: 44%;
+        padding-top: 7%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contato .bloco {
+        width: 94%;
+        height: auto;
+        padding: 5% 2%;
+    }
+}
+
+
+/* #endregion */
+
+
+/* #region SERVICOS*/
+
+.servicos .bloco {
+    background: #f3f3f3;
+    width: 90%;
+    margin: 0 auto;
+    display: table;
+    padding: 2% 5%;
+    margin: 20px auto;
+}
+
+.down {
+    padding: 10px 15px;
+    background: #02b6ce;
+    color: #fff;
+    display: table;
+    border-radius: 15px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+/* #endregion*/
+
+
+/* #region DEPARTAMENTOS*/
+
+.departamentos .conteudo .bloco {
+    width: 96%;
+    float: left;
+    display: table;
+    background: #f3f3f3;
+    transition: 0.3s;
+    padding: 2%;
+    margin: 20px auto;
+}
+
+.departamentos .conteudo .bloco:hover {
+    background: #4a92c3;
+    color: #fff;
+}
+
+.departamentos .bloco .imagem {
+    width: 45%;
+    float: left;
+    margin: 0 auto;
+}
+
+.departamentos #dp_img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.departamentos .bloco .texto {
+    width: 50%;
+    float: right;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+.departamentos .bloco .subtitulo {
+    text-align: left;
+}
+
+
+/* #endregion*/
+
+
+/* #region EDUCAÇÃO AMBIENTAL*/
+
+.educacao-ambiental .conteudo .bloco {
+    width: 44%;
+    float: left;
+    display: table;
+    margin: 1%;
+    padding: 2%;
+    background: #f3f3f3;
+    height: 150px;
+}
+
+.educacao-ambiental .conteudo .bloco:hover {
+    background: #4a92c3;
+    color: #fff;
+}
+
+.educacao-ambiental #bloco {
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+}
+
+.educacao-ambiental .bloco .imagem {
+    width: 45%;
+    float: left;
+    margin: 0 auto;
+}
+
+.educacao-ambiental .bloco .imagem img{
+   display: table;
+}
+
+.educacao-ambiental #bloco img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.educacao-ambiental .bloco .texto {
+    width: 50%;
+    float: right;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+.educacao-ambiental .bloco .subtitulo {
+    text-align: left;
+}
+
+@media screen and (max-width:1250px){
+    .educacao-ambiental .conteudo .bloco {
+        width: 94%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:550px){
+    .educacao-ambiental .bloco .imagem {
+        width: 100%;
+    }
+    
+    .educacao-ambiental .bloco .imagem img{
+       margin: 0 auto;
+       margin-bottom: 40px;
+       height: 250px;
+     }
+    
+    .educacao-ambiental .bloco .texto {
+        width: 95%;
+        float: none;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+/* #endregion*/
+
+
+/* #region ATOS ADMINISTRATIVOS*/
+
+.atos-administrativos .bloco {
+    width: 96%;
+    float: left;
+    display: table;
+    margin: 1% 0;
+    padding: 2%;
+    transition: 0.3s;
+}
+
+.atos-administrativos #bloco {
+    width: 96%;
+    float: left;
+    display: table;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+.atos-administrativos .bloco .imagem {
+    width: 45%;
+    float: left;
+    margin: 0 auto;
+}
+
+.atos-administrativos #bloco img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.atos-administrativos .bloco .texto {
+    width: 50%;
+    float: right;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+.atos-administrativos .bloco .subtitulo {
+    text-align: left;
+}
+
+
+/* #endregion*/
+
+
+/* #region MAPA DO SITE*/
+
+.mapa .bloco {
+    width: 44%;
+    float: left;
+    padding: 2%;
+    margin: 1%;
+    background: #f3f3f3;
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.mapa li {
+    list-style: none;
+}
+
+
+/*#endregion*/
+
+
+/* #region PÁGINA DE LICITAÇÕES*/
+
+#licitacao .detalhes {
+    width: 70%;
+    float: left;
+    display: table;
+}
+
+#licitacao .detalhes b {
+    font-size: 20px;
+}
+
+.situacao {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px;
+    margin: 10px;
+}
+
+#licitacao .situacao {
+    border: 1px solid #2f91ce;
+    color: #2f91ce;
+    padding: 5px;
+    margin: 10px;
+}
+
+#licitacao .veja_mais {
+    width: 25%;
+    float: right;
+    display: table;
+}
+
+#licitacao .veja_mais .bloco {
+    background: #f3f3f3;
+    width: 90%;
+    margin: 0 auto;
+    display: table;
+    padding: 5%;
+    margin: 20px auto;
+}
+
+#licitacao .veja_mais ul {
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: left;
+}
+
+#licitacao .veja_mais ul li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    #licitacao .detalhes {
+        width: 100%;
+    }
+    #licitacao .veja_mais {
+        width: 100%;
+    }
+}
+
+#licitacao .bl_ano {
+    width: 21%;
+    float: left;
+    padding: 5% 0;
+    margin: 2%;
+    background: #e9e9e9;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#licitacao .bl_ano:hover {
+    color: #fff;
+    cursor: pointer;
+    background: #02b6ce;
+}
+
+#licitacao .licitacoes .item {
+    width: 96%;
+    float: left;
+    padding: 2%;
+    margin: 1% 0;
+    display: table;
+    background: #e9e9e9;
+}
+
+#licitacao .licitacoes .cabecalho {
+    width: 100%;
+    display: table;
+    margin-bottom: 15px;
+}
+
+#licitacao .licitacoes h1 {
+    float: left;
+    margin: 0 auto;
+}
+
+#licitacao .licitacoes select#categoria {
+    float: right;
+    padding: 6px 25px;
+}
+
+
+/* #endregion*/
+
+
+/* #region PÁGNAS INSTITUCIONAIS*/
+
+#pagina .conteudo {
+    width: 70%;
+    float: left;
+    display: table;
+}
+
+#pagina .conteudo img {
+    width: 50%;
+    display: table;
+}
+
+#pagina .veja_mais {
+    width: 25%;
+    float: right;
+    display: table;
+}
+
+#pagina .veja_mais .bloco {
+    background: #f3f3f3;
+    width: 90%;
+    margin: 0 auto;
+    display: table;
+    padding: 5%;
+    margin: 20px auto;
+}
+
+#pagina .conteudo .bloco,
+#pagina .conteudo #bloco {
+    background: #f3f3f3;
+}
+
+#pagina .veja_mais ul {
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: left;
+}
+
+#pagina .veja_mais ul li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#pagina .conteudo table {
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+}
+
+#pagina .conteudo table thead {
+    background: #e9e9e9;
+    font-weight: bold;
+}
+
+#pagina .conteudo table tr td {
+    text-align: center;
+    border: 1px solid #333;
+}
+
+@media screen and (max-width: 1000px) {
+    #pagina .conteudo {
+        width: 100%;
+    }
+    #pagina .veja_mais {
+        width: 100%;
+        float: right;
+        display: table;
+    }
+}
+
+
+/*#endregion*/
+
+
+/*#region ORÇAMENTO*/
+
+.orcamento .bl_contato {
+    width: 100%;
+    display: table;
+}
+
+.orcamento .bl_contato label {
+    display: table;
+    font-weight: bold;
+    width: 100%;
+}
+
+.orcamento .bl_contato input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    margin-bottom: 10px;
+}
+
+.orcamento .bl_contato select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #555;
+    margin-bottom: 10px;
+}
+
+.orcamento .bl_contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+.orcamento .bl_contato .bloco_lm {
+    float: left;
+    width: 30%;
+    display: table;
+}
+
+.orcamento .bl_contato .bloco_rg {
+    float: right;
+    width: 66%;
+    display: table;
+}
+
+.orcamento .bl_contato #bt_enviar {
+    padding: 15px 30px;
+    color: #fff;
+    background: #2f91ce;
+    border: none;
+    font-size: 18px;
+    float: right;
+    border-radius: 15px;
+    display: none;
+    cursor: pointer;
+}
+
+.orcamento .bl_contato .bt_proximo {
+    padding: 10px 20px;
+    color: #fff;
+    background: #2f91ce;
+    border: none;
+    font-size: 15px;
+    float: right;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.orcamento .bl_contato .botao {
+    width: 220px;
+    float: right;
+}
+
+.orcamento #dados_endereco,
+.orcamento #dados_descricao,
+.orcamento #revise {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .orcamento .bl_contato .bloco_lm {
+        width: 100%;
+    }
+    .orcamento .bl_contato .bloco_rg {
+        width: 100%;
+    }
+}
+
+
+/* #endregion */
+
+
+/* #region FORNECEDOR*/
+
+.fornecedor .conteudo .tipos {
+    height: 530px;
+    overflow-y: scroll;
+}
+
+.fornecedor .conteudo .down {
+    width: 100%;
+    display: table;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.fornecedor .conteudo .down i {
+    float: none;
+    margin: 0 auto;
+}
+
+.fornecedor .conteudo .down #up {
+    display: none;
+}
+
+.fornecedor .conteudo .bloco {
+    width: 29%;
+    float: left;
+    margin: 1%;
+    padding: 1%;
+    display: table;
+    text-align: left;
+    background: #e9e9e9;
+    height: 150px;
+}
+
+.fornecedor .cadastro_fornecedor {
+    width: 98%;
+    display: table;
+    margin-bottom: 70px;
+}
+
+.fornecedor .cadastro_fornecedor label {
+    display: table;
+    font-weight: bold;
+    width: 100%;
+}
+
+.fornecedor .cadastro_fornecedor input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    margin-bottom: 10px;
+}
+
+.fornecedor .cadastro_fornecedor select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #555;
+    margin-bottom: 10px;
+}
+
+.fornecedor .cadastro_fornecedor textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+.fornecedor .cadastro_fornecedor .bloco_lm {
+    float: left;
+    width: 30%;
+    display: table;
+}
+
+.fornecedor .cadastro_fornecedor .bloco_rg {
+    float: right;
+    width: 66%;
+    display: table;
+}
+
+.fornecedor .cadastro_fornecedor #bt_enviar {
+    padding: 15px 30px;
+    color: #fff;
+    background: #2f91ce;
+    border: none;
+    font-size: 18px;
+    float: right;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 860px) {
+    .fornecedor .conteudo .bloco {
+        width: 46%;
+    }
+}
+
+
+/* #endregion */
+
+
+/* #region pÁGINA nOTÍCIAS*/
+
+.noticias .bloco .imagem {
+    width: 25%;
+    float: left;
+    display: table;
+}
+
+.noticias .bloco .descricao {
+    width: 72%;
+    float: right;
+    display: table;
+}
+
+.descricao {
+    display: table;
+}
+
+
+/* #endregion*/
+
+
+/* #region PÁGINA DE BUSCA*/
+
+.busca i {
+    margin-right: 10px;
+}
+
+.busca .bloco {
+    width: 96%;
+    padding: 2%;
+    margin-bottom: 10px;
+    background: #e3e3e3;
+    display: table;
+}
+
+.busca .documento a {
+    color: #fff;
+}
+
+
+/* #endregion*/
+
+
+/*#region MEU PERFIL*/
+
+.meu_perfil input[type='text'] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.meu_perfil label {
+    width: 100%;
+    display: table;
+}
+
+.meu_perfil .pg {
+    width: 100%;
+}
+
+.meu_perfil button {
+    background: #2f91ce;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+}
+
+.meu_perfil table tr td {
+    border: 1px solid #585757;
+}
+
+.meu_perfil table tr th {
+    background-color: #e9e9e9;
+    padding: 15px;
+    border: 1px solid #585757;
+}
+
+
+/*#endregion*/
+
+
+/*#region CONTRASTE*/
+
+body#contrastePreto,
+body#contrastePreto #licitacoes {
+    background: #000;
+    color: #fff;
+}
+
+body#contrastePreto a,
+body#contrastePreto .azul,
+body#contrastePreto .azul2,
+body#contrastePreto .conteudo a,
+body#contrastePreto .veja a,
+body#contrastePreto .rodape ul li a,
+body#contrastePreto #licitacoes .item .data,
+body#contrastePreto #noticias .bloco .data,
+body#contrastePreto #pagina .conteudo span,
+body#contrastePreto .topo .faixa #faixa .acess .unico {
+    color: #fff;
+}
+
+body#contrastePreto nav ul li a {
+    color: #fff;
+}
+
+body#contrastePreto nav ul li ul li a {
+    color: #000;
+}
+
+@media screen and (max-width:1300px) {
+    body#contrastePreto nav ul li a {
+        color: #000;
+    }
+}
+
+body#contrastePreto .topo .faixa,
+body#contrastePreto .rodape,
+body#contrastePreto .destaques,
+body#contrastePreto #sala_situacao,
+body#contrastePreto #licitacoes .item,
+body#contrastePreto #noticias .bloco,
+body#contrastePreto #rodape_empresas,
+body#contrastePreto #pagina .veja_mais .bloco,
+body#contrastePreto #pagina .conteudo .bloco,
+body#contrastePreto #pagina .conteudo #bloco,
+body#contrastePreto #licitacao .bl_ano,
+body#contrastePreto #licitacao .veja_mais .bloco,
+body#contrastePreto .busca .bloco {
+    background: #333;
+    color: #fff;
+}
+
+body#contrastePreto .topo .faixa #faixa i {
+    color: #fff;
+}
+
+body#contrastePreto .rodape {
+    background: #333;
+    color: #fff;
+}
+
+body#contrastePreto #destaques .destaque1 #branco,
+body#contrastePreto #destaques .destaque1 #verde {
+    background: #000;
+}
+
+
+/* #endregion*/
+
+
+/* #region JANELA */
+
+.janela {
+    font: 15px "Roboto", sans-serif;
+    font-weight: 300;
+    padding: 2%;
+    border-radius: 5px;
+    border: 1px solid #f07f3c;
+    color: #fff;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    overflow: hidden;
+    background-color: none;
+    border: none;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    z-index: 999999;
+}
+
+.janela i {
+    font-size: 35px;
+    color: #ffff00;
+}
+
+.janela .but_mask {
+    margin: 0 auto;
+    float: none;
+    display: table;
+    background: #861518;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+
+#mask {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+#close_janela {
+    position: relative;
+    float: right;
+    font-size: 30px;
+    line-height: 40px;
+    background-color: #f00;
+    color: #fff;
+    font-weight: 700;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: -150px;
+    z-index: 99999999999999;
+    cursor: pointer;
+}
+
+.window {
+    display: none;
+    width: 600px;
+    height: 400px;
+    top: 10%;
+    position: fixed;
+    left: 0;
+    background: #fff;
+    z-index: 9900;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#mascara {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9000;
+    background-color: #000;
+}
+
+.fechar {
+    display: block;
+    text-align: right;
+    color: #ef4e22;
+}
+
+#erro {
+    color: #f00;
+    font-size: 14px;
+}
+
+
+/* #endregion*/
+
+
+/* #region PÁGINA SALA DE SITUAÇÃO*/
+
+.sala .bloco #sala {
+    width: 25%;
+    float: left;
+    display: table;
+    text-align: center;
+}
+
+.sala .bloco #sala i {
+    font-size: 60px;
+    color: #2f91ce;
+    margin-top: 100px;
+}
+
+.sala .bloco .descricao {
+    width: 72%;
+    float: right;
+    display: block;
+    height: 300px;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.sala .bloco table {
+    width: 100%;
+    max-height: 300px;
+    overflow: scroll;
+    display: block;
+}
+
+.descricao {
+    display: table;
+}
+
+tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+@media screen and (max-width:800px) {
+    .sala .bloco #sala {
+        width: 100%;
+    }
+    .sala .bloco #sala i {
+        margin-top: 0;
+    }
+    .sala .bloco .descricao {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+
+/* #endregion*/
+
+.hknBar .svelte-urqfg2 {
+    z-index: 99999999;
+}

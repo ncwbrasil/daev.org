@@ -1,0 +1,81 @@
+Options +FollowSymLinks
+Options -MultiViews
+
+IndexIgnore *
+Options -Indexes
+
+RewriteEngine On
+
+# ####################################################################
+# # If we receive a forwarded http request from a proxy...
+ RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+
+# # ...or just a plain old http request directly from the client
+ RewriteCond %{HTTP:X-Forwarded-Proto} =""
+ RewriteCond %{HTTPS} !=on
+
+# # Redirect to https version
+ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# #####################################################################
+ 
+
+Header unset Pragma
+FileETag None
+Header unset ETag
+
+# 2 Horas (limitado a ficheiro conteúdos)
+<FilesMatch "\.(html|htm|xml|txt|xsl)$">
+Header set Cache-Control "max-age=600, must-revalidate"
+</FilesMatch>
+
+# Em cache para sempre (scripts e folhas de estilo)
+<FilesMatch "\.(js|css)$">
+Header set Cache-Control "max-age=600, must-revalidate"
+Header set Expires "Thu, 15 Apr 2010 20:00:00 GMT"
+Header unset Last-Modified
+</FilesMatch>
+
+#PÁGINAS SIMPLES
+RewriteRule ^index/?$ index.php [NC,L]
+RewriteRule ^sair/?$ sair.php [NC,L]
+
+RewriteRule ^mapa_do_site/?$ mapa_do_site.php [NC,L]
+RewriteRule ^cadastre_senha/?$ cadastre_senha.php [NC,L]
+
+RewriteRule ^envia_contato/?([a-zA-Z0-9-–]+)?/?$ envia_contato.php?p=$1 [NC,L]
+RewriteRule ^gerar_pdf/?([a-zA-Z0-9-–]+)?/?$ gerar_pdf.php?id=$1 [NC,L]
+RewriteRule ^imprime_noticia/?([a-zA-Z0-9-–]+)?/?$ imprime_noticia.php?id=$1 [NC,L]
+
+
+RewriteRule ^envia_senha/?([a-zA-Z0-9-–]+)?/?$ envia_senha.php?p=$1 [NC,L]
+RewriteRule ^cadastro_fornecedor/?([a-zA-Z0-9-–]+)?/?$ cadastro_fornecedor.php?p=$1 [NC,L]
+
+RewriteRule ^contato/?$ contato.php [NC,L]
+RewriteRule ^orcamento/?$ orcamento.php [QSA,L]
+RewriteRule ^404-pagina-nao-encontrada/?$ 404.php [NC,L]
+RewriteRule ^login/?$ login.php [NC]
+RewriteRule ^cadastre-se/?$ cadastre-se.php [NC]
+RewriteRule ^envialogin/?$ envialogin.php [NC,L]
+RewriteRule ^meu-perfil/?$ meu-perfil.php [NC,L]
+
+#PÁGINAS DINAMICAS
+RewriteRule ^pagina/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ pagina.php?p1=$1&p2=$2 [QSA,L]
+RewriteRule ^router/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ router.php?p1=$1 [QSA,L]
+RewriteRule ^servicos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ servicos.php?p1=$1&p2=$2 [QSA,L]
+RewriteRule ^departamentos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ departamentos.php?p1=$1 [QSA,L]
+RewriteRule ^educacao-ambiental/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ educacao-ambiental.php?p1=$1 [QSA,L]
+RewriteRule ^atos-administrativos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ atos-administrativos.php?p1=$1 [QSA,L]
+RewriteRule ^licitacoes/?([a-zA-Z0-9-–_]+)?/?$ licitacoes.php?p1=$1 [QSA,L]
+RewriteRule ^busca/?([a-zA-Z0-9-–]+)?/?$ busca.php?busca=$1 [NC,L]
+RewriteRule ^seja-um-fornecedor/?([a-zA-Z0-9-–_]+)?/?$ seja-um-fornecedor.php?p1=$1 [QSA,L]
+RewriteRule ^noticias/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ noticias.php?p1=$1&p2=$2 [QSA,L]
+RewriteRule ^sala-de-situacao/?([a-zA-Z0-9-–_]+)?/?$ sala-de-situacao.php?p1=$1 [QSA,L]
+RewriteRule ^videos/?([a-zA-Z0-9-–_]+)?/?$ videos.php?p1=$1 [QSA,L]
+RewriteRule ^galeria-de-fotos/?([a-zA-Z0-9-–_]+)?/?$ galeria-de-fotos.php?p1=$1 [QSA,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php72” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

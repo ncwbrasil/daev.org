@@ -1,0 +1,213 @@
+IndexIgnore *
+Options -Indexes
+
+RewriteEngine On
+
+#RewriteCond %{HTTPS} !=on 
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#PÁGINAS SIMPLES
+RewriteRule ^login/?$ login.php [NC,L]
+RewriteRule ^envialogin/?$ envialogin.php [NC,L]
+RewriteRule ^dashboard/?$ dashboard.php [NC,L]
+RewriteRule ^meu_perfil/?$ meu_perfil.php [NC,L]
+
+#PÁGINAS DINÂMICAS
+RewriteRule ^login/?([a-zA-Z0-9-–_]+)?/?$ login.php?cli_url=$1 [NC,L]
+
+RewriteRule ^envialogin/?([a-zA-Z0-9-–_]+)?/?$ envialogin.php?cli_url=$1 [NC,L]
+
+RewriteRule ^meu_perfil/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?$ meu_perfil.php?action=$1&usu_id=$2 [NC,L]
+
+RewriteRule ^admin_modulos/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ admin_modulos.php?pagina=$1&mod_id=$2 [QSA,L]
+RewriteRule ^admin_modulos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ admin_modulos.php?pagina=$1&action=$2&mod_id=$3 [QSA,L]
+
+RewriteRule ^admin_submodulos/?([0-9]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ admin_submodulos.php?mod_id=$1&pagina=$2&sub_id=$3 [QSA,L]
+RewriteRule ^admin_submodulos/?([0-9]+)?/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ admin_submodulos.php?mod_id=$1&pagina=$2&action=$3&sub_id=$4 [QSA,L]
+
+RewriteRule ^admin_setores/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ admin_setores.php?pagina=$1&set_id=$2 [QSA,L]
+RewriteRule ^admin_setores/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ admin_setores.php?pagina=$1&action=$2&set_id=$3 [QSA,L]
+
+RewriteRule ^social_alerta/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ social_alerta.php?pagina=$1&ale_id=$2 [QSA,L]
+RewriteRule ^social_alerta/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ social_alerta.php?pagina=$1&action=$2&ale_id=$3 [QSA,L]
+
+RewriteRule ^aux_configuracao/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ aux_configuracao.php?pagina=$1&conf_id=$2 [QSA,L]
+RewriteRule ^aux_configuracao/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ aux_configuracao.php?pagina=$1&action=$2&conf_id=$3 [QSA,L]
+
+
+#PÁGINAS DE CADASTRO
+RewriteRule ^cadastro_noticias/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_noticias.php?pagina=$1&nt_id=$2 [QSA,L]
+RewriteRule ^cadastro_noticias/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_noticias.php?pagina=$1&action=$2&nt_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_atos_administrativos/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_atos_administrativos.php?pagina=$1&cad_id=$2 [QSA,L]
+RewriteRule ^cadastro_atos_administrativos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_atos_administrativos.php?pagina=$1&action=$2&cad_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_categoria_noticias/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_categoria_noticias.php?pagina=$1&cn_id=$2 [QSA,L]
+RewriteRule ^cadastro_categoria_noticias/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_categoria_noticias.php?pagina=$1&action=$2&cn_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_downloads_categorias/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_downloads_categorias.php?pagina=$1&cat_id=$2 [QSA,L]
+RewriteRule ^cadastro_downloads_categorias/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_downloads_categorias.php?pagina=$1&action=$2&cat_id=$3 [QSA,L]
+
+RewriteRule ^licitacao_categorias/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ licitacao_categorias.php?pagina=$1&lc_id=$2 [QSA,L]
+RewriteRule ^licitacao_categorias/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ licitacao_categorias.php?pagina=$1&action=$2&lc_id=$3 [QSA,L]
+
+RewriteRule ^fornecedores_ramo_atuacao/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ fornecedores_ramo_atuacao.php?pagina=$1&fra_id=$2 [QSA,L]
+RewriteRule ^fornecedores_ramo_atuacao/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ fornecedores_ramo_atuacao.php?pagina=$1&action=$2&fra_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_videos/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_videos.php?pagina=$1&vid_id=$2 [QSA,L]
+RewriteRule ^cadastro_videos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_videos.php?pagina=$1&action=$2&vid_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_galeria/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_galeria.php?pagina=$1&gal_id=$2 [QSA,L]
+RewriteRule ^cadastro_galeria/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_galeria.php?pagina=$1&action=$2&gal_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_sala/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_sala.php?pagina=$1&cs_id=$2 [QSA,L]
+RewriteRule ^cadastro_sala/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_sala.php?pagina=$1&action=$2&cs_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_fornecedores/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_fornecedores.php?pagina=$1&id=$2 [QSA,L]
+RewriteRule ^cadastro_fornecedores/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_fornecedores.php?pagina=$1&action=$2&id=$3 [QSA,L]
+
+RewriteRule ^fornecedores_inativos/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ fornecedores_inativos.php?pagina=$1&id=$2 [QSA,L]
+RewriteRule ^fornecedores_inativos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ fornecedores_inativos.php?pagina=$1&action=$2&id=$3 [QSA,L]
+
+RewriteRule ^cadastro_certificados/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_certificados.php?pagina=$1&ld_id=$2 [QSA,L]
+RewriteRule ^cadastro_certificados/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_certificados.php?pagina=$1&action=$2&ld_id=$3 [QSA,L]
+
+RewriteRule ^fornecedores_ramo_atuacao/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ fornecedores_ramo_atuacao.php?pagina=$1&fra_id=$2 [QSA,L]
+RewriteRule ^fornecedores_ramo_atuacao/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ fornecedores_ramo_atuacao.php?pagina=$1&action=$2&fra_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_cotacoes/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_cotacoes.php?pagina=$1&cot_id=$2 [QSA,L]
+RewriteRule ^cadastro_cotacoes/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_cotacoes.php?pagina=$1&action=$2&cot_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_departamentos/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_departamentos.php?pagina=$1&dep_id=$2 [QSA,L]
+RewriteRule ^cadastro_departamentos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_departamentos.php?pagina=$1&action=$2&dep_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_educacao_ambiental/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_educacao_ambiental.php?pagina=$1&cea_id=$2 [QSA,L]
+RewriteRule ^cadastro_educacao_ambiental/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_educacao_ambiental.php?pagina=$1&action=$2&cea_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_licitacoes/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_licitacoes.php?pagina=$1&lic_id=$2 [QSA,L]
+RewriteRule ^cadastro_licitacoes/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_licitacoes.php?pagina=$1&action=$2&lic_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_orcamentos/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_orcamentos.php?pagina=$1&orc_id=$2 [QSA,L]
+RewriteRule ^cadastro_orcamentos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_orcamentos.php?pagina=$1&action=$2&orc_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_usuarios/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_usuarios.php?pagina=$1&usu_id=$2 [QSA,L]
+RewriteRule ^cadastro_usuarios/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_usuarios.php?pagina=$1&action=$2&usu_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_paginas/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_paginas.php?pagina=$1&pg_id=$2 [QSA,L]
+RewriteRule ^cadastro_paginas/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_paginas.php?pagina=$1&action=$2&pg_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_manual/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_manual.php?pagina=$1&man_id=$2 [QSA,L]
+RewriteRule ^cadastro_manual/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_manual.php?pagina=$1&action=$2&man_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_manual_paginas/?([0-9]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_manual_paginas.php?man_id=$1&pagina=$2&mp_id=$3 [QSA,L]
+RewriteRule ^cadastro_manual_paginas/?([0-9]+)?/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_manual_paginas.php?man_id=$1&pagina=$2&action=$3&mp_id=$4 [QSA,L]
+
+RewriteRule ^cadastro_menu/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_menu.php?pagina=$1&men_id=$2 [QSA,L]
+RewriteRule ^cadastro_menu/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_menu.php?pagina=$1&action=$2&men_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_submenu/?([0-9]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_submenu.php?men_id=$1&pagina=$2&sm_id=$3 [QSA,L]
+RewriteRule ^cadastro_submenu/?([0-9]+)?/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_submenu.php?men_id=$1&pagina=$2&action=$3&sm_id=$4 [QSA,L]
+
+RewriteRule ^cadastro_servicos/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_servicos.php?pagina=$1&id=$2 [QSA,L]
+RewriteRule ^cadastro_servicos/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_servicos.php?pagina=$1&action=$2&id=$3 [QSA,L]
+
+RewriteRule ^cadastro_banner/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_banner.php?pagina=$1&bn_id=$2 [QSA,L]
+RewriteRule ^cadastro_banner/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_banner.php?pagina=$1&action=$2&bn_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_testeiras/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_testeiras.php?pagina=$1&ct_id=$2 [QSA,L]
+RewriteRule ^cadastro_testeiras/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_testeiras.php?pagina=$1&action=$2&ct_id=$3 [QSA,L]
+
+
+RewriteRule ^cadastro_pagina_download/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_pagina_download.php?pagina=$1&pd_id=$2 [QSA,L]
+RewriteRule ^cadastro_pagina_download/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_pagina_download.php?pagina=$1&action=$2&pd_id=$3 [QSA,L]
+
+RewriteRule ^cadastro_servidores/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_servidores.php?pagina=$1&cs_id=$2 [QSA,L]
+RewriteRule ^cadastro_servidores/?([a-zA-Z0-9-–_]+)?/?([a-zA-Z0-9-–_]+)?/?([0-9]+)?/?$ cadastro_servidores.php?pagina=$1&action=$2&cs_id=$3 [QSA,L]
+
+
+
+RewriteRule ^logout/?$ logout.php?pagina=$1 [QSA,L]
+
+<IfModule mod_deflate.c>
+   # Force deflate for mangled headers developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping/
+   <IfModule mod_setenvif.c>
+     <IfModule mod_headers.c>
+       SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+       RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+     </IfModule>
+   </IfModule>
+ 
+   # Compress all output labeled with one of the following MIME-types
+   # (for Apache versions below 2.3.7, you don't need to enable `mod_filter`
+   # and can remove the `<IfModule mod_filter.c>` and `</IfModule>` lines as
+   # `AddOutputFilterByType` is still in the core directives)
+   <IfModule mod_filter.c>
+     AddOutputFilterByType DEFLATE application/atom+xml \
+                                   application/javascript \
+                                   application/json \
+                                   application/rss+xml \
+                                   application/vnd.ms-fontobject \
+                                   application/x-font-ttf \
+                                   application/xhtml+xml \
+                                   application/xml \
+                                   font/opentype \
+                                   image/svg+xml \
+                                   image/x-icon \
+                                   text/css \
+                                   text/html \
+                                   text/plain \
+                                   text/x-component \
+                                   text/xml
+   </IfModule>
+ 
+</IfModule>
+
+#Força a utilizar Cache-Control e Expires header
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+<IfModule mod_expires.c>
+ ExpiresActive on
+ ExpiresDefault "access plus 1 month"
+ ExpiresByType text/cache-manifest "access plus 0 seconds"
+ # Html
+ ExpiresByType text/html "access plus 0 seconds"
+ # Data
+ ExpiresByType text/xml "access plus 0 seconds"
+ ExpiresByType application/xml "access plus 0 seconds"
+ ExpiresByType application/json "access plus 0 seconds"
+ # Feed
+ ExpiresByType application/rss+xml "access plus 1 hour"
+ ExpiresByType application/atom+xml "access plus 1 hour"
+ # Favicon
+ ExpiresByType image/x-icon "access plus 1 week"
+ # Media: images, video, audio
+ ExpiresByType image/gif "access plus 1 month"
+ ExpiresByType image/png "access plus 1 month"
+ ExpiresByType image/jpg "access plus 1 month"
+ ExpiresByType image/jpeg "access plus 1 month"
+ ExpiresByType video/ogg "access plus 1 month"
+ ExpiresByType audio/ogg "access plus 1 month"
+ ExpiresByType video/mp4 "access plus 1 month"
+ ExpiresByType video/webm "access plus 1 month"
+ # HTC files
+ ExpiresByType text/x-component "access plus 1 month"
+ # Webfonts
+ ExpiresByType application/x-font-ttf "access plus 1 month"
+ ExpiresByType font/opentype "access plus 1 month"
+ ExpiresByType application/x-font-woff "access plus 1 month"
+ ExpiresByType image/svg+xml "access plus 1 month"
+ ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+ # CSS / JS
+ ExpiresByType text/css "access plus 1 year"
+ ExpiresByType application/javascript "access plus 1 year"
+ ExpiresByType application/x-javascript  "access plus 1 year"
+</IfModule>
+#Força o IE a sempre carregar utilizando a última versão disponível
+<IfModule mod_headers.c>
+  Header set X-UA-Compatible "IE=Edge,chrome=1"
+  <FilesMatch "\.(js|css|gif|png|jpeg|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
+    Header unset X-UA-Compatible
+  </FilesMatch>
+</IfModule>

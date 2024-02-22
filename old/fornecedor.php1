@@ -1,0 +1,44 @@
+
+<?php
+include('header.php');
+include_once("core/mod_includes/php/funcoes.php");
+require_once('core/mod_includes/php/funcoes-jquery.php');
+
+
+
+	$sql = "SELECT * FROM t12";
+	$stmt = $PDO->prepare($sql);
+	$stmt->execute();
+	$rows = $stmt->rowCount();
+	if ($rows > 0) {
+
+		while($result=$stmt->fetch()){
+
+			$fa_fornecedor = $result['t1'];
+			$texto = $result['t3'];
+
+			$sql1 = "SELECT * FROM fornecedor_atributos WHERE fa_fornecedor = :fa_fornecedor";
+			$stmt1 = $PDO->prepare($sql1);
+			$stmt1->bindValue('fa_fornecedor', $fa_fornecedor);
+			$stmt1->execute();
+			$rows1 = $stmt1->rowCount();
+			if ($rows1 > 0) {
+				$sql2 = "UPDATE fornecedor_atributos SET fa_certificado_licitante = :fa_certificado_licitante where  fa_fornecedor =:fa_fornecedor";
+				$stmt2 = $PDO->prepare($sql2);
+				$stmt2->bindParam(':fa_certificado_licitante', $texto);
+				$stmt2->bindParam(':fa_fornecedor', $fa_fornecedor);
+				$stmt2->execute();
+			}
+			else {
+				$sql3 = "INSERT INTO fornecedor_atributos (fa_fornecedor, fa_certificado_licitante) VALUES (:fa_fornecedor, :fa_certificado_licitante)";
+				$stmt3 = $PDO->prepare($sql3);
+				$stmt3->bindParam(':fa_certificado_licitante', $texto);
+				$stmt3->bindParam(':fa_fornecedor', $fa_fornecedor);
+				$stmt3->execute();
+
+			}
+		}
+
+	} 
+
+?>
